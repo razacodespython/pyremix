@@ -1,0 +1,6 @@
+vyper
+eth-ape
+ape-vyper
+web3
+streamlit
+python-dotenv

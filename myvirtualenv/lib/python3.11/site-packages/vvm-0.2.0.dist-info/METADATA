@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: vvm
+Version: 0.2.0
+Summary: Vyper version management tool
+Home-page: https://github.com/vyperlang/vvm
+Author: Ben Hauser
+Author-email: ben@hauser.id
+License: MIT
+Keywords: ethereum vyper
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests <3,>=2.19.0
+Requires-Dist: packaging <24,>=23.1
+
+# vvm
+
+[![Pypi Status](https://img.shields.io/pypi/v/vvm.svg)](https://pypi.org/project/vvm/) [![Build Status](https://img.shields.io/github/workflow/status/vyperlang/vvm/vvm%20workflow)](https://github.com/vyperlang/vvm/actions) [![Coverage Status](https://img.shields.io/codecov/c/github/vyperlang/vvm)](https://codecov.io/gh/vyperlang/vvm)
+
+Vyper version management tool.
+
+## Installation
+
+### via `pip`
+
+```bash
+pip install vvm
+```
+
+### via `setuptools`
+
+```bash
+git clone https://github.com/vyperlang/vvm.git
+cd vvm
+python3 setup.py install
+```
+
+## Testing
+
+`vvm` is tested on Linux, OSX and Windows with Vyper versions `>=0.1.0-beta.16`.
+
+To run the test suite:
+
+```bash
+pytest tests/
+```
+
+By default, the test suite installs all available `vyper` versions for your OS. If you only wish to test against already installed versions, include the `--no-install` flag. Use the `--vyper-verions` flag to test against one or more specific versions.
+
+## Contributing
+
+Help is always appreciated! Feel free to open an issue if you find a problem, or a pull request if you've solved an issue.
+
+Please check out our [Contribution Guide](CONTRIBUTING.md) prior to opening a pull request.
+
+## License
+
+This project is licensed under the [MIT license](LICENSE).

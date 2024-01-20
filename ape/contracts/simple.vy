@@ -1,4 +1,4 @@
-# @version ^0.3.10
+# @version ^0.3.9
 
 # A contract to store and retrieve users' favorite numbers based on their usernames
 
@@ -8,7 +8,7 @@ userNames: public(HashMap[uint256, Bytes[50]])  # Mapping of index to usernames
 userCount: public(uint256)  # Counter for the number of users added
 
 @external
-def addUser(_username: Bytes[50], _favoriteNumber: uint256):
+def addLALAUser(_username: Bytes[50], _favoriteNumber: uint256):
     """
     Add a user with their username and favorite number.
     """

@@ -1,4 +1,8 @@
 import json
+from dotenv import load_dotenv
+import os
+
+load_dotenv(dotenv_path='../.env')
 
 def create_streamlit_app_from_abi(abi, streamlit_app_file):
     with open(streamlit_app_file, 'w') as app_file:
@@ -33,7 +37,7 @@ def create_streamlit_app_from_abi(abi, streamlit_app_file):
                 app_file.write("    st.write(f'Result: {result}')\n\n")
 
 # Example usage
-contract_abi = [{"inputs": [{"name": "_username", "type": "bytes"}, {"name": "_favoriteNumber", "type": "uint256"}], "name": "addUser", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"name": "_username", "type": "bytes"}], "name": "getFavoriteNumber", "outputs": [{"name": "", "type": "uint256"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"name": "_index", "type": "uint256"}], "name": "getUserNameAtIndex", "outputs": [{"name": "", "type": "bytes"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"name": "arg0", "type": "bytes"}], "name": "favoriteNumbers", "outputs": [{"name": "", "type": "uint256"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"name": "arg0", "type": "uint256"}], "name": "userNames", "outputs": [{"name": "", "type": "bytes"}], "stateMutability": "view", "type": "function"}, {"inputs": [], "name": "userCount", "outputs": [{"name": "", "type": "uint256"}], "stateMutability": "view", "type": "function"}]  # Replace with your contract's ABI
+contract_abi = json.loads(os.getenv('ABI', '[]'))
 streamlit_app_path = 'streamlit_app.py'  # Path for the new Streamlit app
 
 create_streamlit_app_from_abi(contract_abi, streamlit_app_path)

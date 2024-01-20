@@ -8,7 +8,7 @@ w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
 
 assert w3.is_connected(), 'Failed to connect to the Ethereum client.'
 
-contract_address = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
+contract_address = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512'
 abi = [
     {
         "inputs": [
@@ -148,3 +148,6 @@ def userNames(arg0):
 def userCount():
     return contract.functions.userCount().call()
 
+input_user = 'raza'
+addUser(input_user.encode(), 5)
+print(getFavoriteNumber(input_user.encode()))

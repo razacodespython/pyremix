@@ -8,9 +8,9 @@ def main():
     
     print(f'The account balance is: {dev_account.balance / 1e18} ETH')  
      # Deploy the smart contract and print a message 
-    kw = {
-        'type': 0
-    }
+    # kw = {
+    #     'type': 0
+    # }
     contract_class = getattr(project, contract_name)
 
     #deployed_contract = dev_account.deploy(contract_class, **kw, publish=True)

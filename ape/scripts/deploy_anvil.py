@@ -62,6 +62,6 @@ def main():
     new_lines.append(chain_id_line)
     with open(env_file_path, "w") as file:
         file.writelines(new_lines)
-
+        print("added " + chain_id + " and " + contract_address)
     # Run scripts for local ui in 'pyremix' folder
     pyremix(contract=contract_name)

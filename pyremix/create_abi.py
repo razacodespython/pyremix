@@ -4,8 +4,9 @@ import sys
 
 def write_abi_to_env(contract_name):
     # Adjust file path to point to the correct location
+    print("getting abi for " + contract_name)
     file_path = os.path.join("..", "ape", ".build", f"{contract_name}.json")
-
+    print("this is filepath"+file_path)
     # Read ABI from the JSON file
     try:
         with open(file_path, 'r') as file:
@@ -21,7 +22,7 @@ def write_abi_to_env(contract_name):
     # Adjust .env file path to be at the same level as pyremix folder
     env_file_path = os.path.join("..", ".env")
     abi_str = json.dumps(abi)
-
+    
     # Read the existing .env file and replace or append ABI
     new_lines = []
     abi_line = f"ABI={abi_str}\n"

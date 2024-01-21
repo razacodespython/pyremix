@@ -20,23 +20,10 @@ anvil
 
 Inside the `ape` folder there is a sample ape project.  
 Go to the folder and run `ape compile` to compile the contract and then run the deploy script.  
+You can also run the deploy script directly and ape will compile your project, if you haven't done so.
 
-Make sure to check the script and replace the account with your account name.  
+Make sure to check the deploy script and replace the account with your account name.  
 When running the command you need to enter the name of the contract. Make sure it's the same as the name you've given the `.vy` file name.  
 ```bash
 ape run scripts/deploy.py --network http://localhost:8545
-```
-
-Grab the contract address and paste it in the `.env`
-Grab your private keys from the anvil terminal and paste it in the .env too.
-
-Go to the folder `pyremix` and run the following command
-```bash
-python run_setup.py
-```
-
-To run streamlit app 
-
-```bash
-streamlit run streamlit_app.py
 ```
